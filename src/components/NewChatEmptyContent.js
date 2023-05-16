@@ -1,8 +1,7 @@
-import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import PrintInfo from "./PrintInfo";
-import { useState } from "react";
 
 const NewChatEmptyContent = () => {
   const exmplesInfo = [

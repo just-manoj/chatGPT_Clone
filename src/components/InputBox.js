@@ -20,14 +20,14 @@ const InputBox = () => {
             />
           </Pressable>
         </View>
-        <Pressable>
+        {/* <Pressable>
           <Feather
             name="refresh-ccw"
             size={19}
             color="white"
             style={styles.refreshIcon}
           />
-        </Pressable>
+        </Pressable> */}
       </View>
       <Text style={styles.footerInfo}>
         Free Research Preview. ChatGPT may produce inaccurate information about
