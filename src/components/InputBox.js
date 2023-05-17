@@ -1,7 +1,9 @@
 import { View, Text, TextInput, StyleSheet, Pressable } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-const InputBox = () => {
+const InputBox = (props) => {
+  const { getRequest, makeARequest, userRequestInput } = props;
+
   return (
     <View style={styles.container}>
       <View style={styles.outterInputContainer}>
@@ -10,8 +12,10 @@ const InputBox = () => {
             style={styles.inputText}
             placeholder="Send a message."
             placeholderTextColor={"#8e8ea0"}
+            onChangeText={getRequest}
+            value={userRequestInput}
           />
-          <Pressable>
+          <Pressable onPress={makeARequest}>
             <Feather
               name="send"
               size={19}
@@ -20,14 +24,6 @@ const InputBox = () => {
             />
           </Pressable>
         </View>
-        {/* <Pressable>
-          <Feather
-            name="refresh-ccw"
-            size={19}
-            color="white"
-            style={styles.refreshIcon}
-          />
-        </Pressable> */}
       </View>
       <Text style={styles.footerInfo}>
         Free Research Preview. ChatGPT may produce inaccurate information about
