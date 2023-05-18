@@ -5,6 +5,7 @@ import NewChatEmptyContent from "./src/components/NewChatEmptyContent";
 import ChatConversation from "./src/components/ChatConversation";
 import InputBox from "./src/components/InputBox";
 import APIRequest from "./src/util/APICall";
+import Header from "./src/components/Header";
 
 export default function App() {
   const [chatData, setChatData] = useState([]);
@@ -12,6 +13,10 @@ export default function App() {
 
   const getRequest = (req) => {
     setUserRequestInput(req);
+  };
+
+  const emptyConversation = () => {
+    setChatData([]);
   };
 
   const makeARequest = async () => {
@@ -24,8 +29,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Header emptyConversation={emptyConversation} />
       {chatData.length < 1 ? (
-        <NewChatEmptyContent />
+        <NewChatEmptyContent getRequest={getRequest} />
       ) : (
         <ChatConversation chatData={chatData} />
       )}
