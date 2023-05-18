@@ -22,7 +22,7 @@ const Chat = (props) => {
           style={styles.logo}
         />
         <View style={styles.full}>
-          <Text style={styles.text}>{res}</Text>
+          <Text style={[styles.text, { lineHeight: 26 }]}>{res}</Text>
           <View
             style={{
               alignSelf: "flex-end",
@@ -73,12 +73,13 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   text: {
-    marginRight: 60,
+    marginRight: 20,
     marginBottom: 14,
     color: "white",
     fontSize: 18,
     textAlign: "justify",
-    lineHeight: 23,
+    lineHeight: 24,
+    textTransform: "capitalize",
   },
   icon: {
     alignSelf: "flex-end",

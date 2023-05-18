@@ -3,7 +3,8 @@ import { Ionicons } from "@expo/vector-icons";
 
 import PrintInfo from "./PrintInfo";
 
-const NewChatEmptyContent = () => {
+const NewChatEmptyContent = (props) => {
+  const { getRequest } = props;
   const exmplesInfo = [
     `"Explain quantum computing in simple terms"`,
     `"Got any creative ideas for a 10 year old’s birthday?"`,
@@ -24,7 +25,7 @@ const NewChatEmptyContent = () => {
 
   return (
     <ScrollView>
-      <View style={{ alignItems: "center" }}>
+      <View style={styles.container}>
         <Text style={styles.chatgptText}>ChatGPT</Text>
         <View style={styles.messageContainer}>
           <View style={styles.innerMessageContainer}>
@@ -37,7 +38,12 @@ const NewChatEmptyContent = () => {
             <Text style={styles.exmplesText}>Examples</Text>
           </View>
           {exmplesInfo.map((example, index) => (
-            <PrintInfo key={index} infoText={example} isExample />
+            <PrintInfo
+              key={index}
+              infoText={example}
+              isExample
+              getRequest={getRequest}
+            />
           ))}
         </View>
         <View style={styles.messageContainer}>
@@ -76,6 +82,7 @@ const NewChatEmptyContent = () => {
 export default NewChatEmptyContent;
 
 const styles = StyleSheet.create({
+  container: { alignItems: "center", marginTop: 5 },
   chatgptText: {
     marginBottom: 30,
     color: "white",

@@ -2,12 +2,16 @@ import { Pressable, Text, StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 const PrintInfo = (props) => {
-  const { infoText, isExample } = props;
+  const { infoText, isExample, getRequest, makeARequest } = props || undefined;
 
   return (
     <Pressable
       disabled={!isExample && true}
       style={({ pressed }) => [styles.container, pressed && styles.pressed]}
+      onPress={() => {
+        getRequest(infoText.slice(1, infoText.length - 1));
+        // makeARequest(infoText.slice(1, infoText.length - 1));
+      }}
     >
       <Text style={styles.infoText}>
         {infoText}

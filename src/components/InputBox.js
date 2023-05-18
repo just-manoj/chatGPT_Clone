@@ -59,12 +59,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     height: 50,
     borderRadius: 7,
-    paddingLeft: 7,
+    paddingHorizontal: 7,
     backgroundColor: "#40414F",
   },
   inputText: {
-    color: "#8e8ea0",
+    width: "91%",
+    color: "#ffffff",
     fontSize: 19,
+    fontWeight: "600",
   },
   footerInfo: {
     textAlign: "center",
