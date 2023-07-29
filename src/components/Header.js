@@ -20,7 +20,7 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 5,
+    marginTop: 18,
     paddingBottom: 10,
     borderBottomColor: "#777a88",
     borderBottomWidth: 0.5,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   title: {
-    fontSize: 19,
+    fontSize: 22,
     color: "white",
     fontWeight: "500",
   },

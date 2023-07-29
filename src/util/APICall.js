@@ -2,7 +2,7 @@ import axios from "axios";
 import { ChatModal } from "./Modal";
 
 const APIRequest = async (query) => {
-  const API_KEY = `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`;
+  const API_KEY = ``; //Put Your CHATGPT API Key Here
 
   const options = {
     method: "POST",
