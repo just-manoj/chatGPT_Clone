@@ -6,6 +6,7 @@ import ChatConversation from "./src/components/ChatConversation";
 import InputBox from "./src/components/InputBox";
 import APIRequest from "./src/util/APICall";
 import Header from "./src/components/Header";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const [chatData, setChatData] = useState([]);
@@ -40,6 +41,7 @@ export default function App() {
         makeARequest={makeARequest}
         userRequestInput={userRequestInput}
       />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -48,6 +50,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#343541",
-    paddingTop: 20,
+    paddingTop: 10,
   },
 });
